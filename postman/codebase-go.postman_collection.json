@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "374b5236-0e4b-4ee6-9eab-25d3e4ac4fcd",
+		"name": "codebase-go",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26155532"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "bkhbf8q3fbkqb-bjhefb83yfebjh-7hjebfq3748i",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "codebase",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin8\",\n    \"password\": \"adm123.\",\n    \"email\": \"admin@gmail.com\",\n    \"fullName\": \"Super Admin\",\n    \"mobileNumber\": \"08123456789\",\n    \"status\": \"good\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/codebase-go/users/v1/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"codebase-go",
+						"users",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "codebase",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "bkhbf8q3fbkqb-bjhefb83yfebjh-7hjebfq3748i",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin7\",\n    \"password\": \"adm123.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/codebase-go/users/v1/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"codebase-go",
+						"users",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODI2NTgyMTcsImlhdCI6MTY4MjU3MTgxNywic3ViIjoiNjQ0OWZlYWJlNjQ3ODNhNTM0ZjBjYjk3In0.fc3zFkoiPULqjG77L0q7vzqNqESKVlyR1sbQBrJBzXM06iCju9R27qG7De9snf90LtnMW_5j4k2oEm8IezTxp5nCynLazB1mvra-y4KvVU8GJUsku_IQbfyAPmHd0yvNZBbFqk3RzvMF6kbICpgDGYt0wwbvHoKAOcWhMNMT9FI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/codebase-go/users/v1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"codebase-go",
+						"users",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODI2NTgyMTcsImlhdCI6MTY4MjU3MTgxNywic3ViIjoiNjQ0OWZlYWJlNjQ3ODNhNTM0ZjBjYjk3In0.fc3zFkoiPULqjG77L0q7vzqNqESKVlyR1sbQBrJBzXM06iCju9R27qG7De9snf90LtnMW_5j4k2oEm8IezTxp5nCynLazB1mvra-y4KvVU8GJUsku_IQbfyAPmHd0yvNZBbFqk3RzvMF6kbICpgDGYt0wwbvHoKAOcWhMNMT9FI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin7\",\n    \"password\": \"adm123.\",\n    \"email\": \"admin7@gmail.com\",\n    \"fullName\": \"Super Admin\",\n    \"mobileNumber\": \"08123456789\",\n    \"status\": \"goodness\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/codebase-go/users/v1/update/644a2f27aebd62d2b1912538",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"codebase-go",
+						"users",
+						"v1",
+						"update",
+						"644a2f27aebd62d2b1912538"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODI2NTgyMTcsImlhdCI6MTY4MjU3MTgxNywic3ViIjoiNjQ0OWZlYWJlNjQ3ODNhNTM0ZjBjYjk3In0.fc3zFkoiPULqjG77L0q7vzqNqESKVlyR1sbQBrJBzXM06iCju9R27qG7De9snf90LtnMW_5j4k2oEm8IezTxp5nCynLazB1mvra-y4KvVU8GJUsku_IQbfyAPmHd0yvNZBbFqk3RzvMF6kbICpgDGYt0wwbvHoKAOcWhMNMT9FI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/codebase-go/users/v1/delete/644a3fe732a616b0c0f6df82",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"codebase-go",
+						"users",
+						"v1",
+						"delete",
+						"644a3fe732a616b0c0f6df82"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:9000",
+			"type": "string"
+		}
+	]
+}
